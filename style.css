@@ -1,0 +1,76 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+#input, #output {
+	width: 100%;
+	height: 50%;
+	box-sizing: border-box;
+	resize: none;
+	overflow-y: scroll;
+	margin: 0;
+	padding: 5px;
+}
+
+#output {
+	background-color: #555;
+	color: #000;
+}
+
+.wrapper {
+	border: 1px solid;
+	padding: 5px;
+	margin-top: 5px;
+	border-radius: 5px;
+	background-color: #fff2;
+}
+
+#output > .wrapper {
+	background-color: #888;
+}
+
+.wrapper.notice.good {
+	background-color: #afaa;
+}
+
+.wrapper.error {
+	background-color: #faaa;
+}
+
+.label + .wrapper {
+	margin-top: 0;
+}
+
+.label {
+	margin-left: -6px;
+	padding-left: 6px;
+	padding-right: 5px;
+	margin-top: -6px;
+	margin-bottom: 6px;
+	border: 1px solid;
+	width: fit-content;
+	border-radius: 5px 0 5px 0;
+	background-color: #fffa;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.key {
+	flex-basis: 15%;
+	font-weight: bold;
+}
+
+.value {
+	flex-basis: 85%;
+}
+
+.text, .hexdump {
+	margin: 0;
+}
