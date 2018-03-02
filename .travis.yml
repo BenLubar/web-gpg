@@ -1,0 +1,15 @@
+sudo: false
+dist: trusty
+language: go
+go: "1.10"
+before_install:
+  - go get -u github.com/gopherjs/gopherjs
+script:
+  - gopherjs build --minify --localmap
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  verbose: true
+  on:
+    branch: master
